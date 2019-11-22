@@ -1,0 +1,13 @@
+<p>Đã đọc</p>
+<table>
+  <tr>
+    <th>Sách</th>
+    <th>trạng thái</th>
+  </tr>
+  <tr *ngFor="let book of bookList">
+    <div *ngIf="book.read">
+      <td>{{book.name}}</td>
+      <td><a [routerLink]="['delete-book',book.id]">Đọc lại</a></td>
+    </div>
+  </tr>
+</table>

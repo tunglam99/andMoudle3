@@ -1,0 +1,11 @@
+<p>Thêm sách</p>
+<form #bookForm = "ngForm" (ngSubmit)="addBook(bookForm)">
+  <label>
+    Tên:
+    <input type="text" name="name" ngModel class="form-control">
+  </label>
+  <br>
+  <div>
+    <button type="submit">Tạo mới</button>
+  </div>
+</form>

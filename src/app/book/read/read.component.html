@@ -1,0 +1,20 @@
+
+<p>Danh sách đọc</p>
+<div>
+  <table>
+    <tr>
+      <th>Sách</th>
+      <th>trạng thái</th>
+    </tr>
+    <tr *ngFor="let book of bookList">
+      <div *ngIf="!book.read">
+        <td>{{book.name}}</td>
+        <td><a [routerLink]="['/list-book', book.id]" (click)="readBook(book.id)">Đọc</a></td>
+      </div>
+    </tr>
+  </table>
+</div>
+
+<div>
+ <a routerLink="/create-book">Thêm sách</a>
+</div>
